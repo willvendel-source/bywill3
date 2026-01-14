@@ -533,3 +533,15 @@ p,
   height: auto;
   display: block;
 }
+.section-beeld{
+  width:100%;
+  max-width:200px;
+  height:auto;
+  display:block;
+}
+@media (max-width:980px){
+  .section-beeld{ max-width:180px; }
+}
+@media (max-width:520px){
+  .section-beeld{ max-width:160px; margin:0 auto; }
+}
