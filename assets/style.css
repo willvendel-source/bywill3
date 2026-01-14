@@ -79,6 +79,7 @@ body{
 .section{
   padding: 34px 0;
   scroll-margin-top: 92px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
 }
 
 .section-grid{
