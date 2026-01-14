@@ -2,13 +2,23 @@
   --bg0:#07080b;
   --bg1:#0b0c10;
   --bg2:#11141b;
+
   --panel:#0f1218;
   --line:rgba(255,255,255,0.10);
+
   --text:#e9ecf1;
   --muted:#b7c0cd;
+
   --shadow:0 12px 30px rgba(0,0,0,0.40);
   --radius:18px;
   --max:1100px;
+
+  --card-bg: rgba(255,255,255,0.03);
+  --card-border: rgba(255,255,255,0.10);
+
+  --menu-bg: rgba(7,8,11,0.82);
+  --menu-text: rgba(255,255,255,0.92);
+  --menu-border: rgba(255,255,255,0.10);
 }
 
 *{ box-sizing:border-box; }
@@ -21,17 +31,30 @@ body{
   color:var(--text);
   background: linear-gradient(180deg, var(--bg0) 0%, var(--bg1) 45%, var(--bg2) 100%);
 }
+
+.page{
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 92px 20px 72px 20px;
+}
+
+/* Header fixed 1 rij */
+
 .site-header{
-  position: sticky;
+  position: fixed;
   top: 0;
-  z-index: 1000;
-  background: rgba(7,8,11,0.82);
+  left: 0;
+  right: 0;
+  width:100%;
+  z-index: 2000;
+  background: var(--menu-bg);
+  border-bottom: 1px solid var(--menu-border);
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--line);
 }
 
 .nav-wrap{
   max-width: var(--max);
+  width:100%;
   margin: 0 auto;
   padding: 12px 20px;
   display:flex;
@@ -41,42 +64,51 @@ body{
 }
 
 .brand{
-  display: flex;
-  align-items: center;
+  display:flex;
+  align-items:center;
+  padding:0;
+  margin:0;
+  background:transparent !important;
+  border:0 !important;
+  box-shadow:none !important;
 }
 
 .nav{
   display:flex;
+  flex-direction:row;
   flex-wrap:wrap;
-  gap: 10px;
+  justify-content:flex-end;
+  align-items:center;
+  gap:10px;
 }
 
 .nav a{
-  color: var(--muted);
+  color: var(--menu-text);
   text-decoration: none;
   font-size: 14px;
   padding: 9px 12px;
   border-radius: 14px;
   border: 1px solid transparent;
-  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+  white-space:nowrap;
+  transition: background 0.15s ease, border-color 0.15s ease, opacity 0.15s ease;
 }
 
 .nav a:hover{
-  color: var(--text);
   border-color: rgba(255,255,255,0.14);
   background: rgba(255,255,255,0.05);
+  opacity: 0.90;
 }
 
-.page{
-  max-width: var(--max);
-  margin: 0 auto;
-  padding: 28px 20px 72px 20px;
-}
+/* Secties */
 
 .section{
-  padding: 34px 0;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 22px;
+  margin: 24px 0;
   scroll-margin-top: 92px;
-  border-bottom: 1px solid rgba(255,255,255,0.06);
 }
 
 .section-grid{
@@ -84,21 +116,10 @@ body{
   grid-template-columns: 1fr auto;
   gap: 26px;
   align-items: center;
-  padding: 22px;
 }
-.section{
-  background: rgba(255,255,255,0.03);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  padding: 22px;
-  margin: 24px 0;
-}
-.section-text p{
-  margin: 0 0 12px 0;
-  color: var(--text);
-  line-height: 1.7;
-  font-size: 15px;
+
+.section-text{
+  max-width: 560px;
 }
 
 .lead{
@@ -108,9 +129,10 @@ body{
 }
 
 .section-text p{
-  margin: 0 0 10px 0;
+  margin: 0 0 12px 0;
   color: var(--text);
-  line-height: 1.6;
+  line-height: 1.75;
+  font-size: 15px;
 }
 
 .section-media{
@@ -119,22 +141,10 @@ body{
   align-items:center;
 }
 
-.media-frame{
-  width: 100%;
-  min-height: 220px;
-  border-radius: var(--radius);
-  border: 1px dashed rgba(255,255,255,0.16);
-  background: rgba(255,255,255,0.02);
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  color: var(--muted);
-  padding: 18px;
-  text-align:center;
-}
-
+.section-media img,
 .section-beeld{
   width: 100%;
+  max-width: 200px;
   height: auto;
   display: block;
   border-radius: calc(var(--radius) - 2px);
@@ -142,6 +152,8 @@ body{
   background: var(--panel);
   padding: 6px;
 }
+
+/* Footer */
 
 .site-footer{
   border-top: 1px solid rgba(255,255,255,0.08);
@@ -160,37 +172,38 @@ body{
   font-size: 13px;
 }
 
+/* Responsive */
+
 @media (max-width: 980px){
   .section-grid{ grid-template-columns: 1fr; }
-  .media-frame{ min-height: 160px; }
   .nav-wrap{ align-items:flex-start; }
+  .section-media img,
+  .section-beeld{ max-width: 180px; }
 }
 
 @media (max-width: 520px){
-  .page{ padding: 18px 14px 50px 14px; }
+  .page{ padding: 92px 14px 50px 14px; }
   .nav a{ font-size: 13px; padding: 7px 8px; }
-}
-#start .section-grid{
-  background: rgba(255,255,255,0.04);
-  border-color: rgba(255,255,255,0.16);
-}
-.s.section-text{
-  max-width: 520px;
+  .section-media img,
+  .section-beeld{ max-width: 160px; margin: 0 auto; }
 }
 
-/* iets subtiele beweging bij laden */
-
-/* =========================
-   BYWILL logo – seizoenen
-   ========================= */
+/* Logo laden en seizoenen */
 
 #logo{
-  height:48px;
+  height:36px;
   width:auto;
   display:block;
   opacity:0;
   transform: translateY(-2px);
   transition: opacity 0.35s ease, transform 0.35s ease, filter 0.35s ease;
+  padding:0;
+  margin:0;
+  background:transparent !important;
+  border:0 !important;
+  border-radius:0 !important;
+  box-shadow:none !important;
+  outline:none !important;
 }
 
 body.loaded #logo{
@@ -198,389 +211,53 @@ body.loaded #logo{
   transform: translateY(0);
 }
 
-/* Winter */
 body.winter #logo{
-  filter:
-    drop-shadow(0 0 3px rgba(180,210,255,0.35))
-    drop-shadow(0 0 6px rgba(120,170,220,0.18));
+  filter: drop-shadow(0 0 3px rgba(180,210,255,0.35)) drop-shadow(0 0 6px rgba(120,170,220,0.18));
 }
-
-/* Lente */
 body.lente #logo{
-  filter:
-    drop-shadow(0 0 3px rgba(170,240,200,0.35))
-    drop-shadow(0 0 6px rgba(120,210,170,0.18));
+  filter: drop-shadow(0 0 3px rgba(170,240,200,0.35)) drop-shadow(0 0 6px rgba(120,210,170,0.18));
 }
-
-/* Zomer */
 body.zomer #logo{
-  filter:
-    drop-shadow(0 0 3px rgba(255,220,120,0.4))
-    drop-shadow(0 0 6px rgba(255,190,80,0.25));
+  filter: drop-shadow(0 0 3px rgba(255,220,120,0.40)) drop-shadow(0 0 6px rgba(255,190,80,0.25));
 }
-
-/* Herfst */
 body.herfst #logo{
-  filter:
-    drop-shadow(0 0 3px rgba(220,170,120,0.35))
-    drop-shadow(0 0 6px rgba(170,120,80,0.2));
+  filter: drop-shadow(0 0 3px rgba(220,170,120,0.35)) drop-shadow(0 0 6px rgba(170,120,80,0.20));
 }
 
-/* =========================================
-   BYWILL thema kleuren per seizoen
-   Plak dit helemaal onderaan je CSS
-   ========================================= */
+/* Seizoen kleuren via variabelen alleen overrides */
 
-/* basis fallback */
-:root{
-  --bg0:#0b1020;
-  --bg1:#0c1730;
-  --bg2:#0a0f1f;
-  --text:#eef2ff;
-
-  --card-bg: rgba(255,255,255,0.06);
-  --card-border: rgba(255,255,255,0.10);
-
-  --menu-bg: rgba(10,14,20,0.72);
-  --menu-text: rgba(255,255,255,0.92);
-  --menu-border: rgba(255,255,255,0.10);
-
-  --muted: rgba(255,255,255,0.70);
-}
-
-/* Winter */
 body.winter{
   --bg0:#070c18;
   --bg1:#0b1630;
   --bg2:#070b14;
-  --text:#eef2ff;
-
-  --card-bg: rgba(255,255,255,0.06);
   --card-border: rgba(180,210,255,0.14);
-
-  --menu-bg: rgba(6,10,18,0.78);
-  --menu-text: rgba(255,255,255,0.92);
   --menu-border: rgba(180,210,255,0.16);
-
   --muted: rgba(220,235,255,0.72);
 }
 
-/* Lente */
 body.lente{
   --bg0:#06120d;
   --bg1:#0a2016;
   --bg2:#06110c;
-  --text:#ecfff6;
-
-  --card-bg: rgba(255,255,255,0.06);
   --card-border: rgba(170,240,200,0.16);
-
-  --menu-bg: rgba(6,18,13,0.72);
-  --menu-text: rgba(255,255,255,0.92);
   --menu-border: rgba(170,240,200,0.18);
-
   --muted: rgba(225,255,240,0.72);
 }
 
-/* Zomer */
 body.zomer{
   --bg0:#1a1307;
   --bg1:#2a200a;
   --bg2:#161006;
-  --text:#fff7e6;
-
-  --card-bg: rgba(255,255,255,0.06);
   --card-border: rgba(255,220,120,0.18);
-
-  --menu-bg: rgba(20,14,6,0.72);
-  --menu-text: rgba(255,255,255,0.92);
   --menu-border: rgba(255,220,120,0.18);
-
   --muted: rgba(255,245,220,0.72);
 }
 
-/* Herfst */
 body.herfst{
   --bg0:#120b06;
   --bg1:#241307;
   --bg2:#0f0905;
-  --text:#fff1e8;
-
-  --card-bg: rgba(255,255,255,0.06);
   --card-border: rgba(220,170,120,0.18);
-
-  --menu-bg: rgba(18,10,6,0.74);
-  --menu-text: rgba(255,255,255,0.92);
   --menu-border: rgba(220,170,120,0.18);
-
   --muted: rgba(255,235,220,0.72);
-}
-
-/* achtergrond en basistekst */
-body{
-  color: var(--text);
-  background: linear-gradient(180deg, var(--bg0) 0%, var(--bg1) 45%, var(--bg2) 100%);
-}
-
-/* menu achtergrond en linkkleur
-   werkt bij de meeste structuren */
-header,
-.site-header,
-nav,
-.site-nav{
-  background: var(--menu-bg);
-  color: var(--menu-text);
-  border-bottom: 1px solid var(--menu-border);
-  backdrop-filter: blur(10px);
-}
-
-header a,
-.site-header a,
-nav a,
-.site-nav a{
-  color: var(--menu-text);
-  text-decoration: none;
-}
-
-header a:hover,
-.site-header a:hover,
-nav a:hover,
-.site-nav a:hover{
-  opacity: 0.86;
-}
-
-/* kaarten panels secties */
-.section,
-.card,
-.panel,
-.block,
-.content,
-main section{
-  background: var(--card-bg);
-  border: 1px solid var(--card-border);
-  border-radius: 16px;
-}
-
-/* rustige secundaire tekst */
-p,
-.small,
-.muted,
-.subtitle{
-  color: var(--muted);
-}
-/* FIX layout menu en media */
-
-.site-header .nav-wrap{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:16px;
-}
-
-.site-header .nav{
-  display:flex;
-  flex-direction:row;
-  flex-wrap:wrap;
-  gap:10px;
-}
-
-.site-header .nav a{
-  display:inline-block;
-}
-
-
-.section-beeld{
-  max-width:100%;
-  height:auto;
-  display:block;
-}
-/* FIX 2 header blijft 1 rij, menu niet rechts, startbeeld niet duwen */
-
-.site-header{
-  width:100%;
-}
-
-.site-header .nav-wrap{
-  max-width: var(--max);
-  width:100%;
-  margin:0 auto;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-}
-
-.site-header .brand{
-  flex:0 0 auto;
-}
-
-.site-header .nav{
-  flex:1 1 auto;
-  display:flex;
-  flex-direction:row;
-  justify-content:flex-end;
-  align-items:center;
-  gap:10px;
-}
-
-.site-header .nav a{
-  white-space:nowrap;
-}
-
-/* FIX header altijd bovenin, menu niet als zijbalk */
-
-.site-header{
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  z-index: 2000;
-}
-
-.page{
-  padding-top: 92px;
-}
-
-.nav-wrap{
-  max-width: var(--max);
-  width: 100%;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.nav{
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.nav a{
-  display: inline-block;
-  white-space: nowrap;
-}
-
-/* Hard limit op alle content-afbeeldingen rechts */
-
-@media (max-width: 1100px){
-  .section-media img,
-  .section-beeld{
-    max-width: 220px;
-  }
-}
-@media (max-width: 600px){
-  .section-grid{
-    grid-template-columns: 1fr;
-    text-align: left;
-  }
-
-  .section-media img,
-  .section-beeld{
-    max-width: 220px;
-    margin: 0 auto;
-  }
-}
-/* Tekstbalans – rust en adem */
-
-.section-text{
-  max-width: 560px;
-}
-
-.section-text p{
-  line-height: 1.75;
-  font-size: 15px;
-}
-
-/* Definitieve beeldgrootte */
-
-.section-media img,
-.section-beeld{
-  width: 100%;
-  max-width: 220px;
-  height: auto;
-  display: block;
-}
-.section-beeld{
-  width:100%;
-  max-width:200px;
-  height:auto;
-  display:block;
-}
-@media (max-width:980px){
-  .section-beeld{ max-width:180px; }
-}
-@media (max-width:520px){
-  .section-beeld{ max-width:160px; margin:0 auto; }
-}
-
-.brand{
-  display:flex;
-  align-items:center;
-  padding:0;
-  margin:0;
-  background:transparent !important;
-  border:0 !important;
-  box-shadow:none !important;
-}
-
-.brand #logo{
-  height:36px;
-  width:auto;
-  display:block;
-  padding:0;
-  margin:0;
-  background:transparent !important;
-  border:0 !important;
-  border-radius:0 !important;
-  box-shadow:none !important;
-  outline:none !important;
-}
-
-.brand:hover,
-.brand:focus,
-.brand:active{
-  background:transparent !important;
-  box-shadow:none !important;
-  outline:none !important;
-}
-/* Definitief: logo vrijstaand */
-.brand{
-  display:flex;
-  align-items:center;
-  padding:0;
-  margin:0;
-  background:transparent !important;
-  border:0 !important;
-  box-shadow:none !important;
-}
-
-.brand #logo{
-  height:36px;
-  width:auto;
-  display:block;
-  padding:0;
-  margin:0;
-  background:transparent !important;
-  border:0 !important;
-  border-radius:0 !important;
-  box-shadow:none !important;
-  outline:none !important;
-}
-
-/* Definitief: alle rechter afbeeldingen kleiner met 1 getal */
-.section-beeld{
-  width:100%;
-  max-width:200px;
-  height:auto;
-  display:block;
-}
-@media (max-width:980px){
-  .section-beeld{ max-width:180px; }
-}
-@media (max-width:520px){
-  .section-beeld{ max-width:160px; margin:0 auto; }
 }
