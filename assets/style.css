@@ -563,3 +563,15 @@ p,
   border-radius:0;
   box-shadow:none;
 }
+.brand:hover,
+.brand:focus,
+.brand:active{
+  background:transparent;
+  border:0;
+  box-shadow:none;
+  outline:none;
+}
+.brand img{
+  transform: translateY(1px);
+  filter: none;
+}
