@@ -174,8 +174,9 @@ body{
   background: rgba(255,255,255,0.04);
   border-color: rgba(255,255,255,0.16);
 }
-.section-text{
+.s.section-text{
   max-width: 520px;
+}
 
 /* iets subtiele beweging bij laden */
 
