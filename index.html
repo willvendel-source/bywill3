@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="assets/style.css" />
 </head>
 
-<body class="winter">
+<body>
   <header class="site-header">
     <div class="nav-wrap">
       <a class="brand" href="#start">
@@ -324,6 +324,7 @@ Wel aandacht.
   if (m >= 3 && m <= 5) s = "lente";
   else if (m >= 6 && m <= 8) s = "zomer";
   else if (m >= 9 && m <= 11) s = "herfst";
+  document.body.classList.remove("winter","lente","zomer","herfst");
   document.body.classList.add(s);
 })();
 </script>
