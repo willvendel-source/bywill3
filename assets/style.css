@@ -367,3 +367,34 @@ p,
 .subtitle{
   color: var(--muted);
 }
+/* FIX layout menu en media */
+
+.site-header .nav-wrap{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+}
+
+.site-header .nav{
+  display:flex;
+  flex-direction:row;
+  flex-wrap:wrap;
+  gap:10px;
+}
+
+.site-header .nav a{
+  display:inline-block;
+}
+
+#logo{
+  height:32px;
+  width:auto;
+  display:block;
+}
+
+.section-beeld{
+  max-width:100%;
+  height:auto;
+  display:block;
+}
