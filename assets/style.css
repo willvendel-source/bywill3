@@ -15,6 +15,9 @@
 
 html{ scroll-behavior:smooth; }
 
+<script>
+  document.body.classList.add('winter');
+</script>
 body{
   margin:0;
   font-family: Arial, sans-serif;
