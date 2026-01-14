@@ -56,17 +56,18 @@ body{
 
 .nav a{
   color: var(--muted);
-  text-decoration:none;
+  text-decoration: none;
   font-size: 14px;
-  padding: 8px 10px;
-  border-radius: 12px;
+  padding: 9px 12px;
+  border-radius: 14px;
   border: 1px solid transparent;
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
 }
 
 .nav a:hover{
   color: var(--text);
-  border-color: var(--line);
-  background: rgba(255,255,255,0.03);
+  border-color: rgba(255,255,255,0.14);
+  background: rgba(255,255,255,0.05);
 }
 
 .page{
