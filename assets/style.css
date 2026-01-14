@@ -83,13 +83,13 @@ body{
 .section-grid{
   display:grid;
   grid-template-columns: 1fr 1fr;
-  gap: 22px;
+  gap: 26px;
   align-items: center;
-  background: rgba(255,255,255,0.02);
+  background: rgba(255,255,255,0.03);
   border: 1px solid var(--line);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
-  padding: 18px;
+  padding: 22px;
 }
 
 .section-text h2{
