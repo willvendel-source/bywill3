@@ -528,36 +528,7 @@ p,
 @media (max-width:520px){
   .section-beeld{ max-width:160px; margin:0 auto; }
 }
-.brand{
-  padding:0;
-  background:transparent;
-  border:0;
-  box-shadow:none;
-}
 
-.brand img{
-  height:32px;
-  width:auto;
-  display:block;
-  padding:0;
-  margin:0;
-  background:transparent;
-  border:0;
-  border-radius:0;
-  box-shadow:none;
-}
-.brand:hover,
-.brand:focus,
-.brand:active{
-  background:transparent;
-  border:0;
-  box-shadow:none;
-  outline:none;
-}
-.brand img{
-  transform: translateY(1px);
-  filter: none;
-}
 .brand{
   display:flex;
   align-items:center;
