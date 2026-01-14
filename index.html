@@ -137,7 +137,15 @@
   });
 </script>
 <script>
-  document.body.classList.add("winter");
+(function(){
+  const m = new Date().getMonth() + 1;
+  let s = "winter";
+  if (m >= 3 && m <= 5) s = "lente";
+  else if (m >= 6 && m <= 8) s = "zomer";
+  else if (m >= 9 && m <= 11) s = "herfst";
+  document.body.classList.add(s);
+})();
 </script>
+  
 </body>
 </html>
