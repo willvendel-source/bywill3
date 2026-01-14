@@ -52,11 +52,7 @@ body{
   display: flex;
   align-items: center;
 }
-#logo{
-  height: 32px;
-  width: auto;
-  display: block;
-}
+
 .nav{
   display:flex;
   flex-wrap:wrap;
