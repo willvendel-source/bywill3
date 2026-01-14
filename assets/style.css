@@ -469,13 +469,6 @@ p,
   white-space: nowrap;
 }
 
-#start .section-beeld{
-  max-width: 520px;
-  width: 100%;
-  height: auto;
-  margin: 0 auto;
-  display: block;
-}
 /* Stap 1 – media altijd responsief */
 
 .section-media img,
