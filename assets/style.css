@@ -493,3 +493,24 @@ p,
   height: auto;
   display: block;
 }
+@media (max-width: 980px){
+  .section-media img,
+  .section-beeld{
+    max-width: 320px;
+  }
+}
+@media (max-width: 520px){
+  .section-media img,
+  .section-beeld{
+    max-width: 260px;
+    margin: 0 auto;
+  }
+}
+/* Stap 3 – logo vrijstaand en rustig */
+
+.site-header .brand img{
+  height: 28px;
+  width: auto;
+  box-shadow: none;
+  filter: none;
+}
