@@ -266,3 +266,6 @@ body.herfst{
     height:64px;
   }
 }
+#start .start-full{
+  max-width: 100%;
+}
