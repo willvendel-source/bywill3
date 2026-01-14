@@ -211,3 +211,66 @@ body.loaded #logo {
   opacity: 0;
   transform: translateY(-4px);
 }
+/* =========================
+   BYWILL logo seizoenen
+   ========================= */
+
+#logo{
+  height:48px;
+  width:auto;
+  display:block;
+  opacity:0;
+  transform: translateY(-2px);
+  transition: opacity 0.35s ease, transform 0.35s ease, filter 0.35s ease;
+}
+
+body.loaded #logo{
+  opacity:1;
+  transform: translateY(0);
+}
+
+/* =========================
+   BYWILL logo – seizoenen
+   ========================= */
+
+#logo{
+  height:48px;
+  width:auto;
+  display:block;
+  opacity:0;
+  transform: translateY(-2px);
+  transition: opacity 0.35s ease, transform 0.35s ease, filter 0.35s ease;
+}
+
+body.loaded #logo{
+  opacity:1;
+  transform: translateY(0);
+}
+
+/* Winter */
+body.winter #logo{
+  filter:
+    drop-shadow(0 0 3px rgba(180,210,255,0.35))
+    drop-shadow(0 0 6px rgba(120,170,220,0.18));
+}
+
+/* Lente */
+body.lente #logo{
+  filter:
+    drop-shadow(0 0 3px rgba(170,240,200,0.35))
+    drop-shadow(0 0 6px rgba(120,210,170,0.18));
+}
+
+/* Zomer */
+body.zomer #logo{
+  filter:
+    drop-shadow(0 0 3px rgba(255,220,120,0.4))
+    drop-shadow(0 0 6px rgba(255,190,80,0.25));
+}
+
+/* Herfst */
+body.herfst #logo{
+  filter:
+    drop-shadow(0 0 3px rgba(220,170,120,0.35))
+    drop-shadow(0 0 6px rgba(170,120,80,0.2));
+}
