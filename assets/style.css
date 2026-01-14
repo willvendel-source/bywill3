@@ -261,3 +261,8 @@ body.herfst{
   --menu-border: rgba(220,170,120,0.18);
   --muted: rgba(255,235,220,0.72);
 }
+@media (max-width: 520px){
+  #logo{
+    height:64px;
+  }
+}
