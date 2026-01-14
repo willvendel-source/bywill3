@@ -187,12 +187,6 @@ body.winter #logo{
     drop-shadow(0 0 4px rgba(180,210,255,0.45))
     drop-shadow(0 0 10px rgba(120,170,220,0.25));
 }
-#logo {
-  height: 48px;
-  width: auto;
-  display: block;
-  transition: opacity 0.4s ease, transform 0.4s ease;
-}
 
 /* iets subtiele beweging bij laden */
 body.loaded #logo {
@@ -200,10 +194,6 @@ body.loaded #logo {
   transform: translateY(0);
 }
 
-#logo {
-  opacity: 0;
-  transform: translateY(-4px);
-}
 /* =========================
    BYWILL logo – seizoenen
    ========================= */
