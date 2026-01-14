@@ -173,12 +173,6 @@ body{
 }
 .section-text{
   max-width: 520px;
-}
-body.winter #logo{
-  filter:
-    drop-shadow(0 0 4px rgba(180,210,255,0.45))
-    drop-shadow(0 0 10px rgba(120,170,220,0.25));
-}
 
 /* iets subtiele beweging bij laden */
 body.loaded #logo {
