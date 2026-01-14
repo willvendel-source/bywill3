@@ -15,9 +15,6 @@
 
 html{ scroll-behavior:smooth; }
 
-<script>
-  document.body.classList.add('winter');
-</script>
 body{
   margin:0;
   font-family: Arial, sans-serif;
@@ -211,24 +208,6 @@ body.loaded #logo {
   opacity: 0;
   transform: translateY(-4px);
 }
-/* =========================
-   BYWILL logo seizoenen
-   ========================= */
-
-#logo{
-  height:48px;
-  width:auto;
-  display:block;
-  opacity:0;
-  transform: translateY(-2px);
-  transition: opacity 0.35s ease, transform 0.35s ease, filter 0.35s ease;
-}
-
-body.loaded #logo{
-  opacity:1;
-  transform: translateY(0);
-}
-
 /* =========================
    BYWILL logo – seizoenen
    ========================= */
