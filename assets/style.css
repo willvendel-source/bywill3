@@ -92,10 +92,11 @@ body{
   padding: 22px;
 }
 
-.section-text h2{
-  margin: 0 0 8px 0;
-  font-size: 26px;
-  letter-spacing: -0.3px;
+.section-text p{
+  margin: 0 0 12px 0;
+  color: var(--text);
+  line-height: 1.7;
+  font-size: 15px;
 }
 
 .lead{
