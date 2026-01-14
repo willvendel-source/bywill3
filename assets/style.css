@@ -144,16 +144,18 @@ body{
 }
 
 .site-footer{
-  border-top: 1px solid var(--line);
-  background: rgba(0,0,0,0.10);
+  border-top: 1px solid rgba(255,255,255,0.08);
+  background: rgba(0,0,0,0.14);
+  margin-top: 40px;
 }
 
 .footer-wrap{
   max-width: var(--max);
   margin: 0 auto;
-  padding: 16px 20px;
+  padding: 20px 20px;
   display:flex;
   justify-content:space-between;
+  align-items:center;
   color: var(--muted);
   font-size: 13px;
 }
