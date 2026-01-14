@@ -21,14 +21,6 @@ body{
   color:var(--text);
   background: linear-gradient(180deg, var(--bg0) 0%, var(--bg1) 45%, var(--bg2) 100%);
 }
-#logo{
-  height:48px;
-  width:auto;
-  display:block;
-  opacity:0;
-  transform: translateY(-4px);
-  transition: opacity 0.4s ease, transform 0.4s ease, filter 0.4s ease;
-}
 .site-header{
   position: sticky;
   top: 0;
