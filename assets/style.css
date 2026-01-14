@@ -86,7 +86,14 @@ body{
   align-items: center;
   padding: 22px;
 }
-
+.section{
+  background: rgba(255,255,255,0.03);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 22px;
+  margin: 24px 0;
+}
 .section-text p{
   margin: 0 0 12px 0;
   color: var(--text);
