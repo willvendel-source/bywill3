@@ -42,12 +42,14 @@ body{
 }
 
 .brand{
-  color: var(--text);
-  text-decoration:none;
-  font-weight: 800;
-  letter-spacing: 0.6px;
+  display: flex;
+  align-items: center;
 }
-
+#logo{
+  height: 32px;
+  width: auto;
+  display: block;
+}
 .nav{
   display:flex;
   flex-wrap:wrap;
