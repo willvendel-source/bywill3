@@ -431,14 +431,6 @@ p,
   white-space:nowrap;
 }
 
-/* start afbeelding begrenzen */
-#start .section-beeld{
-  max-width: 520px;
-  width:100%;
-  height:auto;
-  margin:0 auto;
-  display:block;
-}
 /* FIX header altijd bovenin, menu niet als zijbalk */
 
 .site-header{
