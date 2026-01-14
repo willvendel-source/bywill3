@@ -269,3 +269,18 @@ body.herfst{
 #start .start-full{
   max-width: 100%;
 }
+/* START blok moet volledige breedte gebruiken */
+#start .section-text,
+#start .start-full{
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+/* Zorg dat de tekst niet als smalle kolom blijft voelen */
+#start{
+  padding: 28px !important;
+}
+
+#start p{
+  max-width: none !important;
+}
