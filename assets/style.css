@@ -547,3 +547,40 @@ p,
   box-shadow:none !important;
   outline:none !important;
 }
+/* Definitief: logo vrijstaand */
+.brand{
+  display:flex;
+  align-items:center;
+  padding:0;
+  margin:0;
+  background:transparent !important;
+  border:0 !important;
+  box-shadow:none !important;
+}
+
+.brand #logo{
+  height:36px;
+  width:auto;
+  display:block;
+  padding:0;
+  margin:0;
+  background:transparent !important;
+  border:0 !important;
+  border-radius:0 !important;
+  box-shadow:none !important;
+  outline:none !important;
+}
+
+/* Definitief: alle rechter afbeeldingen kleiner met 1 getal */
+.section-beeld{
+  width:100%;
+  max-width:200px;
+  height:auto;
+  display:block;
+}
+@media (max-width:980px){
+  .section-beeld{ max-width:180px; }
+}
+@media (max-width:520px){
+  .section-beeld{ max-width:160px; margin:0 auto; }
+}
