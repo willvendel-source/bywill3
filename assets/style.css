@@ -167,3 +167,7 @@ body{
   .page{ padding: 18px 14px 50px 14px; }
   .nav a{ font-size: 13px; padding: 7px 8px; }
 }
+#start .section-grid{
+  background: rgba(255,255,255,0.04);
+  border-color: rgba(255,255,255,0.16);
+}
