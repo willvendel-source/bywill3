@@ -289,3 +289,15 @@ body.herfst{
   max-width: 100% !important;
   width: 100% !important;
 }
+.cta{
+  display:inline-block;
+  padding:10px 14px;
+  border-radius:14px;
+  border:1px solid rgba(255,255,255,0.16);
+  background: rgba(255,255,255,0.06);
+  color: var(--text);
+  text-decoration:none;
+}
+.cta:hover{
+  background: rgba(255,255,255,0.09);
+}
