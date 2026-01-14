@@ -374,3 +374,145 @@ nav a:hover,
 .topbar a:hover{
   opacity: 0.86;
 }
+/* =========================================
+   BYWILL thema kleuren per seizoen
+   Plak dit helemaal onderaan je CSS
+   ========================================= */
+
+/* basis fallback */
+:root{
+  --bg0:#0b1020;
+  --bg1:#0c1730;
+  --bg2:#0a0f1f;
+  --text:#eef2ff;
+
+  --card-bg: rgba(255,255,255,0.06);
+  --card-border: rgba(255,255,255,0.10);
+
+  --menu-bg: rgba(10,14,20,0.72);
+  --menu-text: rgba(255,255,255,0.92);
+  --menu-border: rgba(255,255,255,0.10);
+
+  --muted: rgba(255,255,255,0.70);
+}
+
+/* Winter */
+body.winter{
+  --bg0:#070c18;
+  --bg1:#0b1630;
+  --bg2:#070b14;
+  --text:#eef2ff;
+
+  --card-bg: rgba(255,255,255,0.06);
+  --card-border: rgba(180,210,255,0.14);
+
+  --menu-bg: rgba(6,10,18,0.78);
+  --menu-text: rgba(255,255,255,0.92);
+  --menu-border: rgba(180,210,255,0.16);
+
+  --muted: rgba(220,235,255,0.72);
+}
+
+/* Lente */
+body.lente{
+  --bg0:#06120d;
+  --bg1:#0a2016;
+  --bg2:#06110c;
+  --text:#ecfff6;
+
+  --card-bg: rgba(255,255,255,0.06);
+  --card-border: rgba(170,240,200,0.16);
+
+  --menu-bg: rgba(6,18,13,0.72);
+  --menu-text: rgba(255,255,255,0.92);
+  --menu-border: rgba(170,240,200,0.18);
+
+  --muted: rgba(225,255,240,0.72);
+}
+
+/* Zomer */
+body.zomer{
+  --bg0:#1a1307;
+  --bg1:#2a200a;
+  --bg2:#161006;
+  --text:#fff7e6;
+
+  --card-bg: rgba(255,255,255,0.06);
+  --card-border: rgba(255,220,120,0.18);
+
+  --menu-bg: rgba(20,14,6,0.72);
+  --menu-text: rgba(255,255,255,0.92);
+  --menu-border: rgba(255,220,120,0.18);
+
+  --muted: rgba(255,245,220,0.72);
+}
+
+/* Herfst */
+body.herfst{
+  --bg0:#120b06;
+  --bg1:#241307;
+  --bg2:#0f0905;
+  --text:#fff1e8;
+
+  --card-bg: rgba(255,255,255,0.06);
+  --card-border: rgba(220,170,120,0.18);
+
+  --menu-bg: rgba(18,10,6,0.74);
+  --menu-text: rgba(255,255,255,0.92);
+  --menu-border: rgba(220,170,120,0.18);
+
+  --muted: rgba(255,235,220,0.72);
+}
+
+/* achtergrond en basistekst */
+body{
+  color: var(--text);
+  background: linear-gradient(180deg, var(--bg0) 0%, var(--bg1) 45%, var(--bg2) 100%);
+}
+
+/* menu achtergrond en linkkleur
+   werkt bij de meeste structuren */
+header,
+.site-header,
+nav,
+.site-nav{
+  background: var(--menu-bg);
+  color: var(--menu-text);
+  border-bottom: 1px solid var(--menu-border);
+  backdrop-filter: blur(10px);
+}
+
+header a,
+.site-header a,
+nav a,
+.site-nav a{
+  color: var(--menu-text);
+  text-decoration: none;
+}
+
+header a:hover,
+.site-header a:hover,
+nav a:hover,
+.site-nav a:hover{
+  opacity: 0.86;
+}
+
+/* kaarten panels secties */
+.section,
+.card,
+.panel,
+.block,
+.content,
+main section{
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+}
+
+/* rustige secundaire tekst */
+p,
+.small,
+.muted,
+.subtitle{
+  color: var(--muted);
+}
