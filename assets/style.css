@@ -469,14 +469,6 @@ p,
   white-space: nowrap;
 }
 
-/* Stap 3 – logo vrijstaand en rustig */
-
-.site-header .brand img{
-  height: 28px;
-  width: auto;
-  box-shadow: none;
-  filter: none;
-}
 /* Hard limit op alle content-afbeeldingen rechts */
 
 .section-media img,
@@ -514,16 +506,7 @@ p,
   line-height: 1.75;
   font-size: 15px;
 }
-/* Logo – subtiel maar scherp */
 
-.site-header .brand img{
-  height: 26px;
-  opacity: 0.9;
-}
-
-.site-header .brand img:hover{
-  opacity: 1;
-}
 /* Definitieve beeldgrootte */
 
 .section-media img,
@@ -574,4 +557,34 @@ p,
 .brand img{
   transform: translateY(1px);
   filter: none;
+}
+.brand{
+  display:flex;
+  align-items:center;
+  padding:0;
+  margin:0;
+  background:transparent !important;
+  border:0 !important;
+  box-shadow:none !important;
+}
+
+.brand #logo{
+  height:36px;
+  width:auto;
+  display:block;
+  padding:0;
+  margin:0;
+  background:transparent !important;
+  border:0 !important;
+  border-radius:0 !important;
+  box-shadow:none !important;
+  outline:none !important;
+}
+
+.brand:hover,
+.brand:focus,
+.brand:active{
+  background:transparent !important;
+  box-shadow:none !important;
+  outline:none !important;
 }
