@@ -175,10 +175,6 @@ body{
   max-width: 520px;
 
 /* iets subtiele beweging bij laden */
-body.loaded #logo {
-  opacity: 1;
-  transform: translateY(0);
-}
 
 /* =========================
    BYWILL logo – seizoenen
