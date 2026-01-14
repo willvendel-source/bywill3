@@ -503,7 +503,7 @@ p,
 
 .section-media img,
 .section-beeld{
-  max-width: 300px;
+  max-width: 240px;
   width: 100%;
   height: auto;
   display: block;
@@ -525,4 +525,24 @@ p,
     max-width: 220px;
     margin: 0 auto;
   }
+}
+/* Tekstbalans – rust en adem */
+
+.section-text{
+  max-width: 560px;
+}
+
+.section-text p{
+  line-height: 1.75;
+  font-size: 15px;
+}
+/* Logo – subtiel maar scherp */
+
+.site-header .brand img{
+  height: 26px;
+  opacity: 0.9;
+}
+
+.site-header .brand img:hover{
+  opacity: 1;
 }
