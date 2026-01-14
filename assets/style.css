@@ -484,3 +484,12 @@ p,
   margin: 0 auto;
   display: block;
 }
+/* Stap 1 – media altijd responsief */
+
+.section-media img,
+.section-beeld{
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  display: block;
+}
