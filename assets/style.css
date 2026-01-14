@@ -134,10 +134,11 @@ body{
 .section-beeld{
   width: 100%;
   height: auto;
-  display:block;
-  border-radius: var(--radius);
+  display: block;
+  border-radius: calc(var(--radius) - 2px);
   border: 1px solid var(--line);
   background: var(--panel);
+  padding: 6px;
 }
 
 .site-footer{
