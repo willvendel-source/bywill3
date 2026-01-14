@@ -266,8 +266,43 @@ Of juist over het laten rusten.
         </div>
       </div>
     </section>
+    <section class="section" id="contact">
+      <div class="section-grid">
+        <div class="section-text">
+          <h2>Contact</h2>
+          <p class="lead">Stuur een bericht. Je mailt direct naar Will.</p>
 
-  
+          <form class="contact-form" action="https://formspree.io/f/xpqqwqdq" method="POST">
+            <input type="hidden" name="_subject" value="BYWILL contactformulier">
+            <label>
+              Naam
+              <input type="text" name="naam" required>
+            </label>
+
+          <label>
+             E-mail
+           <input type="email" name="email" required>
+          </label>
+
+            <label>
+              Bericht
+              <textarea name="bericht" rows="6" required></textarea>
+            </label>
+
+            <button type="submit">Verstuur</button>
+          </form>
+
+          <p style="margin-top:12px; color:var(--muted); font-size:13px;">
+            Na verzenden zie je een bevestiging in beeld.
+          </p>
+        </div>
+
+        <div class="section-media">
+          <img class="section-beeld" src="assets/contact.png" alt="Contact" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <footer class="site-footer">
