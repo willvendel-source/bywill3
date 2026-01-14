@@ -322,25 +322,21 @@ body.herfst{
 
 .contact-form button:hover{
   background: rgba(255,255,255,0.09);
-}
-#start .section-text,
-#start .start-full{
-  max-width: 100% !important;
-  width: 100% !important;
+
 }
 /* ===== START sectie: volledige breedte ===== */
 
 #start{
-  padding: 28px;
+padding: 28px;
 }
 
 #start .section-text,
 #start .start-full{
-  max-width: 100%;
-  width: 100%;
+max-width: 100%;
+width: 100%;
 }
 
 #start p{
-  max-width: none;
+max-width: none;
 }
 
