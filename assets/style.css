@@ -266,12 +266,6 @@ body.herfst{
     height:64px;
   }
 }
-
-/* Zorg dat de tekst niet als smalle kolom blijft voelen */
-
-#start p{
-  max-width: none !important;
-}
 .cta{
   display:inline-block;
   padding:10px 14px;
@@ -329,12 +323,24 @@ body.herfst{
 .contact-form button:hover{
   background: rgba(255,255,255,0.09);
 }
-#start{
-  padding: 28px !important;
-}
 #start .section-text,
 #start .start-full{
   max-width: 100% !important;
   width: 100% !important;
+}
+/* ===== START sectie: volledige breedte ===== */
+
+#start{
+  padding: 28px;
+}
+
+#start .section-text,
+#start .start-full{
+  max-width: 100%;
+  width: 100%;
+}
+
+#start p{
+  max-width: none;
 }
 
