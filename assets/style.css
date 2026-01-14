@@ -284,3 +284,8 @@ body.herfst{
 #start p{
   max-width: none !important;
 }
+/* Start tekst moet volle breedte gebruiken */
+#start .start-full{
+  max-width: 100% !important;
+  width: 100% !important;
+}
