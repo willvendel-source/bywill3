@@ -398,3 +398,43 @@ p,
   height:auto;
   display:block;
 }
+/* FIX 2 header blijft 1 rij, menu niet rechts, startbeeld niet duwen */
+
+.site-header{
+  width:100%;
+}
+
+.site-header .nav-wrap{
+  max-width: var(--max);
+  width:100%;
+  margin:0 auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.site-header .brand{
+  flex:0 0 auto;
+}
+
+.site-header .nav{
+  flex:1 1 auto;
+  display:flex;
+  flex-direction:row;
+  justify-content:flex-end;
+  align-items:center;
+  gap:10px;
+}
+
+.site-header .nav a{
+  white-space:nowrap;
+}
+
+/* start afbeelding begrenzen */
+#start .section-beeld{
+  max-width: 520px;
+  width:100%;
+  height:auto;
+  margin:0 auto;
+  display:block;
+}
